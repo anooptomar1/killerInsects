@@ -15,6 +15,7 @@
 		EA17F5E620018B510094DA28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA17F5E520018B510094DA28 /* Assets.xcassets */; };
 		EA17F5E920018B510094DA28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA17F5E720018B510094DA28 /* LaunchScreen.storyboard */; };
 		EA17F5F12001ACB90094DA28 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F5F02001ACB90094DA28 /* IndexViewController.swift */; };
+		EAD6427F20048472009486C2 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6427E20048472009486C2 /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EA17F5E820018B510094DA28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA17F5EA20018B510094DA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA17F5F02001ACB90094DA28 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		EAD6427E20048472009486C2 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		EA17F5D920018B510094DA28 /* killerInsect */ = {
 			isa = PBXGroup;
 			children = (
+				EAD6427D20048443009486C2 /* styleElements */,
 				EA17F5DA20018B510094DA28 /* AppDelegate.swift */,
 				EA17F5DC20018B510094DA28 /* Scene.sks */,
 				EA17F5DE20018B510094DA28 /* Scene.swift */,
@@ -71,6 +74,14 @@
 				EA17F5EA20018B510094DA28 /* Info.plist */,
 			);
 			path = killerInsect;
+			sourceTree = "<group>";
+		};
+		EAD6427D20048443009486C2 /* styleElements */ = {
+			isa = PBXGroup;
+			children = (
+				EAD6427E20048472009486C2 /* RoundButton.swift */,
+			);
+			path = styleElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA17F5E120018B510094DA28 /* ViewController.swift in Sources */,
+				EAD6427F20048472009486C2 /* RoundButton.swift in Sources */,
 				EA17F5DF20018B510094DA28 /* Scene.swift in Sources */,
 				EA17F5DB20018B510094DA28 /* AppDelegate.swift in Sources */,
 				EA17F5F12001ACB90094DA28 /* IndexViewController.swift in Sources */,

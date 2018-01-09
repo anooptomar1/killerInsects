@@ -11,8 +11,15 @@ import ARKit
 
 class Scene: SKScene {
     
+    let button = SKSpriteNode(imageNamed: "cancel")
+    
     override func didMove(to view: SKView) {
         // Setup your scene here
+        button.position = CGPoint(x: view.frame.midX-50, y: view.frame.midY-30)
+        button.name = "backButton"
+        button.size = CGSize(width: button.size.width * 0.8, height: button.size.height * 0.8)
+        
+        addChild(button)
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -20,6 +27,24 @@ class Scene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+       
+        //El reto es eobtener una coordenada 2D a partir de un plano 3D (La pantalla y los graficos)
+        //Localizar le primer toque del conjunto de toques
+        //Mirar si el toque cae dentro de nuestra vista de AR
+        guard let touch = touches.first else {return}
+        let location = touch.location(in: self)
+        
+        
+        //Buscar todos los nodos que han sido tocados por ese toque de usuario
+        let hit = nodes(at: location)
+        
+        if hit.first?.name == "backButton" {
+            print("El toque X ha sido en: (\(location.x), \(location.y))")
+            self.removeFromParent()
+            self.view?.presentScene(nil)
+        }
+        
+        /*
         guard let sceneView = self.view as? ARSKView else {
             return
         }
@@ -35,6 +60,9 @@ class Scene: SKScene {
             // Add a new anchor to the session
             let anchor = ARAnchor(transform: transform)
             sceneView.session.add(anchor: anchor)
+            
         }
+        */
+        
     }
 }
