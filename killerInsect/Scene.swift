@@ -12,6 +12,7 @@ import ARKit
 class Scene: SKScene {
     
     let button = SKSpriteNode(imageNamed: "cancel")
+
     
     override func didMove(to view: SKView) {
         // Setup your scene here
@@ -40,8 +41,7 @@ class Scene: SKScene {
         
         if hit.first?.name == "backButton" {
             print("El toque X ha sido en: (\(location.x), \(location.y))")
-            self.removeFromParent()
-            self.view?.presentScene(nil)
+            
         }
         
         /*
@@ -65,4 +65,7 @@ class Scene: SKScene {
         */
         
     }
+    
 }
+
+
