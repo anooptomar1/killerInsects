@@ -40,8 +40,8 @@ class Scene: SKScene {
         let hit = nodes(at: location)
         
         if hit.first?.name == "backButton" {
-            print("El toque X ha sido en: (\(location.x), \(location.y))")
-            
+            print("El toque X ha sido en: (\(location.x), \(location.y))")            
+
         }
         
         /*
@@ -66,6 +66,7 @@ class Scene: SKScene {
         
     }
     
+
 }
 
 

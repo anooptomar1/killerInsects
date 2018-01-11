@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8926F3DD2007D7A80002EEB4 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8926F3DC2007D7A80002EEB4 /* MenuScene.swift */; };
+		8926F3DF2007F24B0002EEB4 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8926F3DE2007F24A0002EEB4 /* MenuScene.sks */; };
 		EA17F5DB20018B510094DA28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F5DA20018B510094DA28 /* AppDelegate.swift */; };
 		EA17F5DD20018B510094DA28 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EA17F5DC20018B510094DA28 /* Scene.sks */; };
 		EA17F5DF20018B510094DA28 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F5DE20018B510094DA28 /* Scene.swift */; };
@@ -14,11 +16,11 @@
 		EA17F5E420018B510094DA28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA17F5E220018B510094DA28 /* Main.storyboard */; };
 		EA17F5E620018B510094DA28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA17F5E520018B510094DA28 /* Assets.xcassets */; };
 		EA17F5E920018B510094DA28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA17F5E720018B510094DA28 /* LaunchScreen.storyboard */; };
-		EA17F5F12001ACB90094DA28 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F5F02001ACB90094DA28 /* IndexViewController.swift */; };
-		EAD6427F20048472009486C2 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6427E20048472009486C2 /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8926F3DC2007D7A80002EEB4 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		8926F3DE2007F24A0002EEB4 /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
 		EA17F5D720018B510094DA28 /* killerInsect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = killerInsect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA17F5DA20018B510094DA28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA17F5DC20018B510094DA28 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
@@ -28,8 +30,6 @@
 		EA17F5E520018B510094DA28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA17F5E820018B510094DA28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA17F5EA20018B510094DA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA17F5F02001ACB90094DA28 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
-		EAD6427E20048472009486C2 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +43,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8926F3D72007D5860002EEB4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				EA17F5DC20018B510094DA28 /* Scene.sks */,
+				8926F3DE2007F24A0002EEB4 /* MenuScene.sks */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8926F3D82007D5BA0002EEB4 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				EA17F5E220018B510094DA28 /* Main.storyboard */,
+				EA17F5E720018B510094DA28 /* LaunchScreen.storyboard */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		8926F3D92007D6050002EEB4 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EA17F5E520018B510094DA28 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		EA17F5CE20018B500094DA28 = {
 			isa = PBXGroup;
 			children = (
@@ -62,26 +88,16 @@
 		EA17F5D920018B510094DA28 /* killerInsect */ = {
 			isa = PBXGroup;
 			children = (
-				EAD6427D20048443009486C2 /* styleElements */,
+				8926F3D92007D6050002EEB4 /* Assets */,
 				EA17F5DA20018B510094DA28 /* AppDelegate.swift */,
-				EA17F5DC20018B510094DA28 /* Scene.sks */,
-				EA17F5DE20018B510094DA28 /* Scene.swift */,
 				EA17F5E020018B510094DA28 /* ViewController.swift */,
-				EA17F5F02001ACB90094DA28 /* IndexViewController.swift */,
-				EA17F5E220018B510094DA28 /* Main.storyboard */,
-				EA17F5E520018B510094DA28 /* Assets.xcassets */,
-				EA17F5E720018B510094DA28 /* LaunchScreen.storyboard */,
+				EA17F5DE20018B510094DA28 /* Scene.swift */,
+				8926F3DC2007D7A80002EEB4 /* MenuScene.swift */,
+				8926F3D72007D5860002EEB4 /* Scenes */,
+				8926F3D82007D5BA0002EEB4 /* Misc */,
 				EA17F5EA20018B510094DA28 /* Info.plist */,
 			);
 			path = killerInsect;
-			sourceTree = "<group>";
-		};
-		EAD6427D20048443009486C2 /* styleElements */ = {
-			isa = PBXGroup;
-			children = (
-				EAD6427E20048472009486C2 /* RoundButton.swift */,
-			);
-			path = styleElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +162,7 @@
 				EA17F5DD20018B510094DA28 /* Scene.sks in Resources */,
 				EA17F5E920018B510094DA28 /* LaunchScreen.storyboard in Resources */,
 				EA17F5E620018B510094DA28 /* Assets.xcassets in Resources */,
+				8926F3DF2007F24B0002EEB4 /* MenuScene.sks in Resources */,
 				EA17F5E420018B510094DA28 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,10 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA17F5E120018B510094DA28 /* ViewController.swift in Sources */,
-				EAD6427F20048472009486C2 /* RoundButton.swift in Sources */,
+				8926F3DD2007D7A80002EEB4 /* MenuScene.swift in Sources */,
 				EA17F5DF20018B510094DA28 /* Scene.swift in Sources */,
 				EA17F5DB20018B510094DA28 /* AppDelegate.swift in Sources */,
-				EA17F5F12001ACB90094DA28 /* IndexViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
