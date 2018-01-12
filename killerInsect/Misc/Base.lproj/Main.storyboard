@@ -1,28 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7CF-6p-MTb">
     <device id="retina5_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tXr-a1-R10">
+        <scene sceneID="oZL-WZ-tuk">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="killerInsect" customModuleProvider="target" sceneMemberID="viewController">
-                    <arskView key="view" contentMode="scaleToFill" id="EO5-fy-WZq">
+                <viewController id="7CF-6p-MTb" customClass="ViewController" customModule="killerInsect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gm7-DD-Z7b">
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arskView>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arskView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qws-pT-Zzl">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </arskView>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLv-ub-xWl">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </skView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uLv-ub-xWl" firstAttribute="leading" secondItem="gm7-DD-Z7b" secondAttribute="leading" id="Pu8-BM-w6Z"/>
+                            <constraint firstItem="uLv-ub-xWl" firstAttribute="top" secondItem="tKn-r3-fBf" secondAttribute="top" id="U5z-be-Fs7"/>
+                            <constraint firstAttribute="bottom" secondItem="uLv-ub-xWl" secondAttribute="bottom" id="epd-yE-oF5"/>
+                            <constraint firstAttribute="trailing" secondItem="Qws-pT-Zzl" secondAttribute="trailing" id="fnc-4J-5FJ"/>
+                            <constraint firstItem="Qws-pT-Zzl" firstAttribute="leading" secondItem="gm7-DD-Z7b" secondAttribute="leading" id="mdZ-8S-MtL"/>
+                            <constraint firstItem="Qws-pT-Zzl" firstAttribute="top" secondItem="tKn-r3-fBf" secondAttribute="top" id="mqP-Oy-Wef"/>
+                            <constraint firstAttribute="bottom" secondItem="Qws-pT-Zzl" secondAttribute="bottom" id="ugn-RV-rwo"/>
+                            <constraint firstAttribute="trailing" secondItem="uLv-ub-xWl" secondAttribute="trailing" id="ym2-2w-EB6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tKn-r3-fBf"/>
+                    </view>
                     <connections>
-                        <outlet property="sceneView" destination="EO5-fy-WZq" id="YuC-8q-ovz"/>
+                        <outlet property="menuView" destination="uLv-ub-xWl" id="Djk-n6-fY9"/>
+                        <outlet property="sceneView" destination="Qws-pT-Zzl" id="edT-gM-c4M"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Tx-Os-yRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-476" y="-239"/>
+            <point key="canvasLocation" x="-470.68965517241384" y="-256.80000000000001"/>
         </scene>
     </scenes>
 </document>

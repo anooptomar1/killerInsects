@@ -13,12 +13,14 @@ import ARKit
 class ViewController: UIViewController, ARSKViewDelegate {
     
     @IBOutlet var sceneView: ARSKView!
+    @IBOutlet var menuView: SKView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Set the view's delegate
         sceneView.delegate = self
+        menuView.delegate = self
         
         // Show statistics such as fps and node count
         sceneView.showsFPS = true
@@ -26,7 +28,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
         
         // Load the SKScene from 'Scene.sks'
         if let scene = SKScene(fileNamed: "MenuScene") {
-            sceneView.presentScene(scene)
+            menuView.presentScene(scene)
         }
     }
     
