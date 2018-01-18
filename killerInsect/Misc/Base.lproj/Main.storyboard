@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arskView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qws-pT-Zzl">
+                            <arskView contentMode="scaleToFill" sceneName="Scene.sks" translatesAutoresizingMaskIntoConstraints="NO" id="Qws-pT-Zzl">
                                 <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </arskView>
-                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLv-ub-xWl">
+                            <skView contentMode="scaleToFill" sceneName="MenuScene.sks" translatesAutoresizingMaskIntoConstraints="NO" id="uLv-ub-xWl">
                                 <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </skView>
                         </subviews>
@@ -38,7 +38,7 @@
                         <viewLayoutGuide key="safeArea" id="tKn-r3-fBf"/>
                     </view>
                     <connections>
-                        <outlet property="menuView" destination="uLv-ub-xWl" id="Djk-n6-fY9"/>
+                        <outlet property="pauseMenuView" destination="uLv-ub-xWl" id="pgK-IG-npV"/>
                         <outlet property="sceneView" destination="Qws-pT-Zzl" id="edT-gM-c4M"/>
                     </connections>
                 </viewController>

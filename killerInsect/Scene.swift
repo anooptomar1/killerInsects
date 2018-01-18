@@ -40,8 +40,14 @@ class Scene: SKScene {
         let hit = nodes(at: location)
         
         if hit.first?.name == "backButton" {
-            print("El toque X ha sido en: (\(location.x), \(location.y))")            
-
+            print("El toque X ha sido en: (\(location.x), \(location.y))")
+            
+            /*
+            let transition = SKTransition.flipHorizontal(withDuration: 0.5)
+            let menuScene = MenuScene(size: self.size)
+            menuScene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+            self.view?.presentScene(menuScene, transition: transition)
+            */
         }
         
         /*

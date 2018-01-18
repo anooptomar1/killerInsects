@@ -10,25 +10,31 @@ import UIKit
 import SpriteKit
 import ARKit
 
-class ViewController: UIViewController, ARSKViewDelegate {
+class ViewController: UIViewController, ARSKViewDelegate, PauseMenuViewDelegate {
+    
+    func pauseMenuUnPauseButtonPressed() {
+        print("PauseMenu")
+    }
+    
     
     @IBOutlet var sceneView: ARSKView!
-    @IBOutlet var menuView: SKView!
+    @IBOutlet weak var pauseMenuView: MenuScene! {
+        didSet { pauseMenuView.delegateMenu = self }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Set the view's delegate
         sceneView.delegate = self
-        menuView.delegate = self
         
         // Show statistics such as fps and node count
         sceneView.showsFPS = true
         sceneView.showsNodeCount = true
         
         // Load the SKScene from 'Scene.sks'
-        if let scene = SKScene(fileNamed: "MenuScene") {
-            menuView.presentScene(scene)
+        if let scene = SKScene(fileNamed: "Scene") {
+            sceneView.presentScene(scene)
         }
     }
     
