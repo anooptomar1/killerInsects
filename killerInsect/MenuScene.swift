@@ -16,11 +16,12 @@ class MenuScene : SKScene {
     let backGroundImageLeft = SKSpriteNode(imageNamed: "insectBack2")
     let backGroundImageRight = SKSpriteNode(imageNamed: "insectBack3")
     
+    weak var menuSceneDelegate : MenuSceneViewDelegate?
  
     
     override func didMove(to view: SKView) {
         
-        self.view?.scene?.backgroundColor = UIColor.white
+        self.view?.scene?.backgroundColor = UIColor.black
         
         backGroundImageLeft.position = CGPoint(x: -view.frame.midX/2, y: 0)
         backGroundImageLeft.size = CGSize(width: backGroundImageLeft.size.width, height: backGroundImageLeft.size.height)
@@ -57,15 +58,23 @@ class MenuScene : SKScene {
         
         if hit.first?.name == "startGameBtn" {
             print("StartGameBtn has been touched")
-
+            self.menuSceneDelegate?.startGame()
+            /*
             let transition = SKTransition.flipHorizontal(withDuration: 0.5)
             let GameScene = Scene(size: self.size)
             GameScene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
             self.view?.presentScene(GameScene, transition: transition)
-            
+            */
             
         }
     }
     
 }
+
+
+protocol MenuSceneViewDelegate : class {
+    func startGame()
+}
+
+
 

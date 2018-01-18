@@ -10,26 +10,35 @@ import UIKit
 import SpriteKit
 import ARKit
 
-class ViewController: UIViewController, ARSKViewDelegate {
+class ViewController: UIViewController, ARSKViewDelegate, MenuSceneViewDelegate, GameSceneViewDelegate {
+
+    
     
     @IBOutlet var sceneView: ARSKView!
-    @IBOutlet var menuSceneView: SKView!
+    
+
+    var gameSceneProperty : Scene!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Set the view's delegate
         sceneView.delegate = self
-        menuSceneView.delegate = self
         
-        // Show statistics such as fps and node count
-        sceneView.showsFPS = true
-        sceneView.showsNodeCount = true
+        gameSceneProperty = Scene(size: sceneView.bounds.size)
+        gameSceneProperty.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        gameSceneProperty.scaleMode = .aspectFill
+        gameSceneProperty.gameSceneDelegate = self
         
-        // Load the SKScene from 'Scene.sks'
+        //Load the SKScene from 'Scene.sks'
+        sceneView.presentScene(gameSceneProperty)
+
+        /*
         if let scene = SKScene(fileNamed: "MenuScene") {
             menuSceneView.presentScene(scene)
         }
+        */
+ 
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,8 +87,17 @@ class ViewController: UIViewController, ARSKViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+
+    func startGame() {
+        print("Se Inicia juego")
+        
+    }
+ 
+    func endGame() {
+        print("End Game")
+        self.dismiss(animated: true, completion: nil)
+
+    }
     
 
-    
- 
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7CF-6p-MTb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aOS-IV-NgR">
     <device id="retina5_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,34 +17,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arskView contentMode="scaleToFill" sceneName="Scene.sks" translatesAutoresizingMaskIntoConstraints="NO" id="Qws-pT-Zzl">
+                            <arskView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qws-pT-Zzl">
                                 <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </arskView>
-                            <skView contentMode="scaleToFill" sceneName="MenuScene.sks" translatesAutoresizingMaskIntoConstraints="NO" id="uLv-ub-xWl">
-                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
-                            </skView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="uLv-ub-xWl" firstAttribute="leading" secondItem="gm7-DD-Z7b" secondAttribute="leading" id="Pu8-BM-w6Z"/>
-                            <constraint firstItem="uLv-ub-xWl" firstAttribute="top" secondItem="tKn-r3-fBf" secondAttribute="top" id="U5z-be-Fs7"/>
-                            <constraint firstAttribute="bottom" secondItem="uLv-ub-xWl" secondAttribute="bottom" id="epd-yE-oF5"/>
                             <constraint firstAttribute="trailing" secondItem="Qws-pT-Zzl" secondAttribute="trailing" id="fnc-4J-5FJ"/>
                             <constraint firstItem="Qws-pT-Zzl" firstAttribute="leading" secondItem="gm7-DD-Z7b" secondAttribute="leading" id="mdZ-8S-MtL"/>
                             <constraint firstItem="Qws-pT-Zzl" firstAttribute="top" secondItem="tKn-r3-fBf" secondAttribute="top" id="mqP-Oy-Wef"/>
                             <constraint firstAttribute="bottom" secondItem="Qws-pT-Zzl" secondAttribute="bottom" id="ugn-RV-rwo"/>
-                            <constraint firstAttribute="trailing" secondItem="uLv-ub-xWl" secondAttribute="trailing" id="ym2-2w-EB6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tKn-r3-fBf"/>
                     </view>
                     <connections>
-                        <outlet property="menuSceneView" destination="uLv-ub-xWl" id="FLP-oC-7D2"/>
                         <outlet property="sceneView" destination="Qws-pT-Zzl" id="edT-gM-c4M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Tx-Os-yRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-470.68965517241384" y="-256.80000000000001"/>
+            <point key="canvasLocation" x="-242" y="-266"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="z8r-xl-sth">
+            <objects>
+                <viewController id="aOS-IV-NgR" customClass="MenuViewController" customModule="killerInsect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xud-oY-biY">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQH-xl-wKh">
+                                <rect key="frame" x="424" y="186" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="startGame:" destination="aOS-IV-NgR" eventType="touchUpInside" id="Npj-uJ-NN2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Kqx-3A-ddH"/>
+                    </view>
+                    <connections>
+                        <segue destination="7CF-6p-MTb" kind="presentation" identifier="gameSegue" id="Xtl-8g-ueF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I7h-P2-dKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-933" y="-266"/>
         </scene>
     </scenes>
 </document>
