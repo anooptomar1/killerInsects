@@ -38,7 +38,7 @@
                         <viewLayoutGuide key="safeArea" id="tKn-r3-fBf"/>
                     </view>
                     <connections>
-                        <outlet property="pauseMenuView" destination="uLv-ub-xWl" id="pgK-IG-npV"/>
+                        <outlet property="menuSceneView" destination="uLv-ub-xWl" id="FLP-oC-7D2"/>
                         <outlet property="sceneView" destination="Qws-pT-Zzl" id="edT-gM-c4M"/>
                     </connections>
                 </viewController>

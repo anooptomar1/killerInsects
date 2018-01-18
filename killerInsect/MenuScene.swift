@@ -16,7 +16,7 @@ class MenuScene : SKScene {
     let backGroundImageLeft = SKSpriteNode(imageNamed: "insectBack2")
     let backGroundImageRight = SKSpriteNode(imageNamed: "insectBack3")
     
-    weak var delegateMenu : PauseMenuViewDelegate?
+ 
     
     override func didMove(to view: SKView) {
         
@@ -57,19 +57,15 @@ class MenuScene : SKScene {
         
         if hit.first?.name == "startGameBtn" {
             print("StartGameBtn has been touched")
-            self.delegateMenu?.pauseMenuUnPauseButtonPressed()
-            /*
+
             let transition = SKTransition.flipHorizontal(withDuration: 0.5)
             let GameScene = Scene(size: self.size)
             GameScene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
             self.view?.presentScene(GameScene, transition: transition)
-            */
+            
             
         }
     }
     
 }
 
-protocol PauseMenuViewDelegate: class{
-    func pauseMenuUnPauseButtonPressed()
-}
