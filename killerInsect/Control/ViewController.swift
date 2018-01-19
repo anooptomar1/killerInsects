@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import ARKit
 
-class ViewController: UIViewController, ARSKViewDelegate, MenuSceneViewDelegate, GameSceneViewDelegate {
+class ViewController: UIViewController, ARSKViewDelegate, GameSceneViewDelegate {
 
     
     
@@ -32,12 +32,6 @@ class ViewController: UIViewController, ARSKViewDelegate, MenuSceneViewDelegate,
         
         //Load the SKScene from 'Scene.sks'
         sceneView.presentScene(gameSceneProperty)
-
-        /*
-        if let scene = SKScene(fileNamed: "MenuScene") {
-            menuSceneView.presentScene(scene)
-        }
-        */
  
     }
     
@@ -87,12 +81,8 @@ class ViewController: UIViewController, ARSKViewDelegate, MenuSceneViewDelegate,
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
-
-    func startGame() {
-        print("Se Inicia juego")
-        
-    }
  
+    // MARK: Method of Delegate of Scene
     func endGame() {
         print("End Game")
         self.dismiss(animated: true, completion: nil)

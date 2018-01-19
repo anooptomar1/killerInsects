@@ -17,7 +17,8 @@ class Scene: SKScene {
     
     override func didMove(to view: SKView) {
         // Setup your scene here
-        button.position = CGPoint(x: view.frame.midX-50, y: view.frame.midY-30)
+        button.position = CGPoint(x: view.frame.midX-110, y: view.frame.midY-30)
+        button.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         button.name = "backButton"
         button.size = CGSize(width: button.size.width * 0.8, height: button.size.height * 0.8)
         
