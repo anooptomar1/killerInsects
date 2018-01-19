@@ -8,6 +8,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MarkerFeltThin.ttf">
+            <string>MarkerFelt-Thin</string>
+        </array>
+        <array key="MarkerFeltWide.ttf">
+            <string>MarkerFelt-Wide</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="oZL-WZ-tuk">
@@ -46,16 +54,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQH-xl-wKh">
-                                <rect key="frame" x="424" y="186" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="startGame:" destination="aOS-IV-NgR" eventType="touchUpInside" id="Npj-uJ-NN2"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="not-bE-oR3">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insectBack2" translatesAutoresizingMaskIntoConstraints="NO" id="poj-kl-JlR">
+                                        <rect key="frame" x="0.0" y="69.666666666666686" width="306" height="236"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insectBack3" translatesAutoresizingMaskIntoConstraints="NO" id="pop-Km-nW8">
+                                        <rect key="frame" x="506" y="43.666666666666657" width="306" height="288"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qf-MJ-OxP">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Killer Insect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yS-Op-BTK">
+                                        <rect key="frame" x="224.33333333333334" y="17" width="364.33333333333326" height="93"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="70"/>
+                                        <color key="textColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="2" height="2"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-hF-m0h" customClass="RoundButton" customModule="killerInsect" customModuleProvider="target">
+                                        <rect key="frame" x="275.66666666666669" y="158.66666666666666" width="261.00000000000006" height="59"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                        <inset key="contentEdgeInsets" minX="50" minY="10" maxX="50" maxY="10"/>
+                                        <state key="normal" title="Start Game">
+                                            <color key="titleColor" red="0.58431372550000005" green="0.0" blue="0.7725490196" alpha="0.75" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="startGame:" destination="aOS-IV-NgR" eventType="touchUpInside" id="1Ke-TI-kUA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87263081770589368" green="0.57515883161401371" blue="1" alpha="0.74609375" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="0Ia-hF-m0h" firstAttribute="centerX" secondItem="8qf-MJ-OxP" secondAttribute="centerX" id="D5x-PP-dvf"/>
+                                    <constraint firstItem="8yS-Op-BTK" firstAttribute="top" secondItem="8qf-MJ-OxP" secondAttribute="top" constant="17" id="P8u-iD-T82"/>
+                                    <constraint firstItem="8yS-Op-BTK" firstAttribute="centerX" secondItem="8qf-MJ-OxP" secondAttribute="centerX" id="QnB-jS-MP5"/>
+                                    <constraint firstItem="0Ia-hF-m0h" firstAttribute="centerY" secondItem="8qf-MJ-OxP" secondAttribute="centerY" id="elP-0M-kob"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="not-bE-oR3" firstAttribute="top" secondItem="Kqx-3A-ddH" secondAttribute="top" id="881-ex-oQ9"/>
+                            <constraint firstAttribute="trailing" secondItem="8qf-MJ-OxP" secondAttribute="trailing" id="HFb-7v-fap"/>
+                            <constraint firstItem="8qf-MJ-OxP" firstAttribute="leading" secondItem="xud-oY-biY" secondAttribute="leading" id="JNO-hb-7OX"/>
+                            <constraint firstAttribute="trailing" secondItem="not-bE-oR3" secondAttribute="trailing" id="VQb-7l-Wom"/>
+                            <constraint firstAttribute="bottom" secondItem="8qf-MJ-OxP" secondAttribute="bottom" id="cYV-sl-g3V"/>
+                            <constraint firstItem="8qf-MJ-OxP" firstAttribute="top" secondItem="Kqx-3A-ddH" secondAttribute="top" id="fmQ-j1-Eau"/>
+                            <constraint firstItem="not-bE-oR3" firstAttribute="leading" secondItem="xud-oY-biY" secondAttribute="leading" id="leI-f4-5iP"/>
+                            <constraint firstAttribute="bottom" secondItem="not-bE-oR3" secondAttribute="bottom" id="vyG-0C-nt8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Kqx-3A-ddH"/>
                     </view>
                     <connections>
@@ -64,7 +130,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7h-P2-dKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-933" y="-266"/>
+            <point key="canvasLocation" x="-933.25123152709364" y="-266.39999999999998"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="insectBack2" width="225" height="236"/>
+        <image name="insectBack3" width="300" height="288"/>
+    </resources>
 </document>
